@@ -1,33 +1,26 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-
-# Virtual environments
-env/
-venv/
+*.pyo
+*.pyd
 .venv/
-
-# Distribution
-dist/
-build/
-*.egg-info/
-
-# Database
+venv/
 *.db
 *.sqlite
 *.sqlite3
 
-# Logs
-*.log
+# Dependencies 
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
 
 # IDE
-.idea/
 .vscode/
-*.swp
-*.swo
-*~
+.idea/
+.codeartsd/
 
 # OS
 .DS_Store
@@ -35,3 +28,15 @@ Thumbs.db
 
 # Environment
 .env
+.env.local
+
+# Logs
+*.log
+
+# Temp
+tmp/
+temp/
+
+#other
+.codegraph
+
