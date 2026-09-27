@@ -1,0 +1,77 @@
+{
+    "name": "python-knowledge-base",
+    "description": "Python 知识库网站 - 知识查询、个人知识库管理及分享服务",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "laravel/framework": "^10.0",
+        "laravel/passport": "^11.0",
+        "laravel/sanctum": "^3.3",
+        "laravel/breeze": "^1.19",
+        "intervention/image": "^2.7",
+        "guzzlehttp/guzzle": "^7.5",
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.5",
+        "mockery/mockery": "^1.6",
+        "filp/whoops": "^2.15",
+        "fzaninotto/faker": "^1.20",
+        "symfony/debug": "^6.3",
+        "symfony/var-dumper": "^6.3",
+        "doctrine/dbal": "^3.7",
+        "laravel/scout": "^10.0",
+        "teamtnt/laravel-tntsearch": "^12.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
+        "laravel/pint": "^1.13",
+        "spatie/laravel-activitylog": "^4.6",
+        "spatie/laravel-permission": "^5.10",
+        "spatie/laravel-query-builder": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\\": "app/",
+            "Database\\Factories\\\": "database/factories/",
+            "Database\\Seeders\\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\Foundation\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "test": "php artisan test",
+        "test-coverage": "php artisan test --coverage",
+        "lint": "php artisan pint",
+        "migrate": "php artisan migrate",
+        "migrate:fresh": "php artisan migrate:fresh",
+        "seed": "php artisan db:seed",
+        "serve": "php artisan serve",
+        "queue:work": "php artisan queue:work"
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "sort-by": ["type", "name"]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
